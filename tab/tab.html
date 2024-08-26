@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tab</title>
+</head>
+
+<body>
+  <!-- ↓↓c-tab↓↓ -->
+  <div class="c-tab" data-tab="wrap">
+    <div class="c-tab__list" role="tablist">
+      <button id="tab1" type="button" class="c-tab__btn is-active" role="tab" aria-controls="tab-panel1" tabindex="0"
+        aria-selected="true" data-tab="btn" onclick="tabChange(event, 'tab-panel1')">
+        Aのボタンの名前
+      </button>
+      <button id="tab2" type="button" class="c-tab__btn" role="tab" aria-controls="tab-panel2" tabindex="-1"
+        data-tab="btn" onclick="tabChange(event, 'tab-panel2')">
+        Bのボタンの名前
+      </button>
+    </div>
+
+    <!-- Aの中身 Start -->
+    <div id="tab-panel1" class="c-tab__panel is-active" role="tabpanel" tabindex="0" aria-labelledby="tab1"
+      data-tab="content">
+      Aの中身
+    </div>
+    <!-- Aの中身 END -->
+
+    <!-- Bの中身 Start -->
+    <div id="tab-panel2" class="c-tab__panel" role="tabpanel" tabindex="-1" aria-labelledby="tab2" data-tab="content"
+      style="display: none;">
+      Bの中身
+    </div>
+    <!-- Bの中身 END -->
+  </div>
+  <!-- ↑↑c-tab↑↑ -->
+  <script src="./tab.js"></script>
+</body>
+
+</html>
